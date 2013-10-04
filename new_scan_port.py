@@ -63,10 +63,6 @@ def scan_main():
   os.system('sudo echo "start scaning..."');
   #print 'ok';
   lock=threading.Lock();
-  #write_info(lock,150,160);
-  #for i in range(5):
-    #t=threading.Thread(target=write_info,args=(lock,i*51+1,(i+1)*51+1,));
-    #t.start();
   t=threading.Thread(target=write_info,args=(lock,0,256,));
   t.start();
   t=threading.Thread(target=report_progress,args=());
@@ -75,3 +71,4 @@ def scan_main():
   
 if __name__=='__main__':
   scan_main();
+  #测试文件
